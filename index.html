@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check IP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="text-copied">
+            <h3>TEXT COPIED</h3>
+        </div>
+        <div class="no-ip">
+            <h3>NO IP FOUND</h3>
+        </div>
+        <div class="no-email">
+            <h3>NO EMAIL FOUND</h3>
+        </div>
+    <header class="header">
+        <div class="title">
+            <h1 class="main-title">EXTRACTOR</h1>
+        </div>
+        
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="ip"><a href="#extractIP">IP ADDRESSES</a></li>
+                <li class="email"><a href="#extractEMAIL">EMAIL ADDRESSES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <textarea class="text" placeholder="Put your text here ..." cols="70" rows="20"></textarea>
+        <p class="empty">put the text you want to extract from</p>
+        <button class="button-submit">Extract IPs</button>
+        <div class="result">
+            <div class="result-result-list">
+                <textarea rows="5" class="result-list" spellcheck="false" readonly></textarea>
+            
+                <button class="copy-all">COPY ALL</button>
+                <button class="copy-all delete-all">DELETE ALL</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
