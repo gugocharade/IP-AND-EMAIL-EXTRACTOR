@@ -98,7 +98,10 @@
             }else if(arr.length === 0 && type === "email"){
                 $(".no-email").animate([{transform : "translateY(-200px)", opacity: 0, visibility: "visible"},{transform : "translateY(0)",opacity: 1},{transform : "translateY(0)",opacity: 1},{transform : "translateY(-200px)", opacity:0, visibility:"hidden"}],{duration: 2500,easing:"ease-out"});
             }
-    }
+    };
+    $(".delete-all").addEventListener("click",(e)=>{
+        resultArea.value = "";
+    });
 
     $(".ip").click();
     $(".ip").focus();
