@@ -69,7 +69,7 @@
     }
     const showRes = (arr)=>{
         let res = "";
-        arr.forEach(el => res += `${el} `);
+        arr.forEach(el => res += `${el} &#013 `);
         return res;
         
     }
@@ -86,7 +86,7 @@
             extractEmail(textArr);
         }
         textArea.value = "";
-        resultArea.value = showRes(resultArr);
+        resultArea.innerHTML = showRes(resultArr);
         check(resultArr,type);
         }
     };
