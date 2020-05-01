@@ -31,11 +31,13 @@
         if(target.matches(".ip, .ip *")){
             type = "ip";
             $(".ip").classList.add("focus");
+            buttonExtract.textContent = "Extract IPs"
             $(".email").classList.remove("focus");
         }else if(target.matches(".email, .email *")){
             type = "email";
             $(".email").classList.add("focus");
             $(".ip").classList.remove("focus");
+            buttonExtract.textContent = "Extract EMAILS"
 
         }
     });
