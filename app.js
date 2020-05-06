@@ -75,6 +75,7 @@
     }
     const treat = (text, reg) => {
         let newText = text.replace(reg, " ");
+        newText = newText.replace("-", " ");
         return newText.split(" ");
     }
     const extract = (e)=>{
