@@ -73,17 +73,21 @@
         return res;
         
     }
+    const treat = (text, reg) => {
+        let newText = text.replace(reg, " ");
+        return newText.split(" ");
+    }
     const extract = (e)=>{
-        const text = textArea.value;
+        let text = textArea.value;
         if(text === ""){
            $(".empty").style.visibility = "visible";
         }else{
             $(".empty").style.visibility = "hidden";
-        let textArr = text.split(" ");
+        
         if(type === "ip"){
-            extractIp(textArr);
+            extractIp(treat(text, /[^0-9-.]/g));
         }else if(type === "email"){
-            extractEmail(textArr);
+            extractEmail(treat(text, /[{()}]/g));
         }
         textArea.value = "";
         resultArea.innerHTML = showRes(resultArr);
